@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Click Outside JS | Standalone javascript library to make click outside event</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Standalone javascript library to make click outside event">
+    <meta name="keywords" content="javascript, js, library, javascript plugin, click outside event, click outside, plugin">
+    <meta name="robots" content="index, follow">
+    <meta name="DC.title" content="Click Outside JS | Standalone javascript library to make click outside event">
+
+    <meta property="og:url" content="http://bosnaufal.github.io/click-outside-js/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Click Outside JS">
+    <meta property="og:description" content="Standalone javascript library to make click outside event">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@BosNaufal">
+    <meta name="twitter:site" content="@BosNaufal">
+    <meta name="twitter:title" content="Click Outside JS">
+    <meta name="twitter:description" content="Standalone javascript library to make click outside event">
+
+
+    <link rel="canonical" href="http://bosnaufal.github.io/click-outside-js/">
+    <link rel="author" href="https://github.com/BosNaufal" />
+    <link rel="publisher" href="https://github.com/BosNaufal" />
+
+    <style>
+      body {
+        position: relative;
+        height: 100%;
+      }
+      #app > div {
+        padding: 15px;
+      }
+      #app > div {
+        border: 1px solid black;
+        display: inline-block;
+        width: 30%;
+        float: left;
+        margin-right: 1%;
+      }
+      b {
+        color: red;
+        display: none;
+      }
+
+      #in {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click Outside JS</h1>
+    <div id="app">
+      <div id="target" onclick="clickInside();">
+        <span>Click Me Outside And Inside</span>
+        <b id="out">Outside Me!</b>
+        <b id="in">Inside Me!</b>
+      </div>
+    </div>
+
+    <script src="./click-outside.min.js"></script>
+    <script>
+
+      // Define the element
+      var el = document.getElementById('target');
+      var outEl = document.getElementById('out');
+      var inEl = document.getElementById('in');
+
+      // Make New Click Outside Event
+      var myEvent = new onClickOutside(el, function() {
+        console.log("You've Just Clicked Outside The Box!");
+        outEl.style.display = "block"
+        inEl.style.display = "none"
+      })
+
+      // myEvent.remove() // To Remove Event Listener
+      // myEvent.reinit() // To Reinit Event Listener
+
+      // Handle Click Inside
+      function clickInside() {
+        console.log("Clicked Inside");
+        outEl.style.display = "none"
+        inEl.style.display = "block"
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "click-outside-js",
+  "version": "0.0.1",
+  "description": "Standalone javascript library to make click outside event",
+  "main": "click-outside-js.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BosNaufal/click-outside-js.git"
+  },
+  "keywords": [
+    "event",
+    "standalone",
+    "click",
+    "click-outside"
+  ],
+  "author": "Naufal Rabbani <bosnaufalemail@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BosNaufal/click-outside-js/issues"
+  },
+  "homepage": "https://bosnaufal.github.io/click-outside-js"
+}
